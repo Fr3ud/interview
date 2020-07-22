@@ -40,3 +40,25 @@
 
     console.log(uniqArray); // ["Alexander", "😻", "Maria", "Pavel"]
 }
+
+/**
+ * Remove duplicates from sorted array
+ */
+
+{
+    const array = [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 5, 5, 5, 7];
+
+    const removeDuplicates = function(nums) {
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] === nums[i - 1]) {
+                nums.splice(i, 1);
+                i--;
+            }
+        }
+        
+        return nums.length;
+    };
+    
+    console.log(removeDuplicates(array));
+    console.log(array);
+}
