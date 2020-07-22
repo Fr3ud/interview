@@ -26,3 +26,17 @@
 
     console.log(uniqArray); // ["Alexander", "😻", "Maria", "Pavel"]
 }
+
+/**
+ * Remove duplicates from unsorted array using Reduce
+ */
+
+{
+    const array = ['Alexander', '😻', 'Maria', '😻', 'Pavel', '😻'];
+
+    const uniqArray = array.reduce((uniq, item) => {
+      return uniq.includes(item) ? uniq : [...uniq, item];
+    }, []);
+
+    console.log(uniqArray); // ["Alexander", "😻", "Maria", "Pavel"]
+}
