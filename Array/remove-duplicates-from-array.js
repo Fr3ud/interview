@@ -5,10 +5,24 @@
  * whether primitive values or object references.
  */
 
-const array = ['Alexander', '😻', 'Maria', '😻', 'Pavel', '😻'];
+{
+    const array = ['Alexander', '😻', 'Maria', '😻', 'Pavel', '😻'];
 
-const uniqArray1 = [...new Set(array)];
-const uniqArray2 = Array.from(new Set(array));
+    const uniqArray1 = [...new Set(array)];
+    const uniqArray2 = Array.from(new Set(array));
 
-console.log(uniqArray1); // ["Alexander", "😻", "Maria", "Pavel"]
-console.log(uniqArray2); // ["Alexander", "😻", "Maria", "Pavel"]
+    console.log(uniqArray1); // ["Alexander", "😻", "Maria", "Pavel"]
+    console.log(uniqArray2); // ["Alexander", "😻", "Maria", "Pavel"]
+}
+
+/**
+ * Remove duplicates from unsorted array using Filter
+ */
+
+{
+    const array = ['Alexander', '😻', 'Maria', '😻', 'Pavel', '😻'];
+
+    const uniqArray = array.filter((item, index) => index === array.indexOf(item));
+
+    console.log(uniqArray); // ["Alexander", "😻", "Maria", "Pavel"]
+}
