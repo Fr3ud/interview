@@ -26,9 +26,38 @@
     console.dir({ obj });
 }
 
+/**
+ * Simple closure
+ */
+
+
 {
     const add = x => y => x + y;
 
     const result = add(4)(2);
+    console.log(result);
+}
+
+/**
+ * Recursive closure
+ */
+
+{
+    const add = x => y => {
+        const z = x + y;
+        console.log(`${x} + ${y} = ${z}`);
+        
+        return add(z);
+    }
+    // const add = x => y => add(x + y);
+
+    const a1 = add(4);
+    const a2 = a1(2);
+    const a3 = a2(5);
+    const a4 = a1(10);
+    const a5 = a2(1);
+    console.log(a1, a2, a3, a4, a5);
+
+    const result = add(1)(3)(3)(7);
     console.log(result);
 }
