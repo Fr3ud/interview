@@ -25,3 +25,10 @@
 
     console.dir({ obj });
 }
+
+{
+    const add = x => y => x + y;
+
+    const result = add(4)(2);
+    console.log(result);
+}
