@@ -49,6 +49,7 @@
         
         return add(z);
     }
+
     // const add = x => y => add(x + y);
 
     const a1 = add(4);
@@ -59,5 +60,17 @@
     console.log(a1, a2, a3, a4, a5);
 
     const result = add(1)(3)(3)(7);
+    console.log(result);
+}
+
+{
+    const adder = x => {
+        const value = () => x;
+        const add = y => adder(x + y);
+
+        return { add, value };
+    }
+
+    const result = adder(42).add(-4).add(12).add(-8).value();
     console.log(result);
 }
