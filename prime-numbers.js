@@ -21,3 +21,27 @@ const getPrimes = num => {
 
     return primes;
 }
+
+
+/**
+ * Sieve of Eratosthenes algorithm O(log log n)
+ */
+
+{
+    const getPrimes = num => {
+        const sieve = [];
+        const primes = [];
+
+        for (let i = 2; i <= num; i++) {
+            if (!sieve[i]) {
+                primes.push(i);
+
+                for (let j = i * i; j <= num; j += i) {
+                    sieve[j] = true;
+                }
+            }
+        }
+
+        return primes;
+    }
+}
