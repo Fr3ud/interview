@@ -27,3 +27,19 @@
 
     console.log(singleNumber(input));
 }
+
+
+{
+    const input = [4, 1, 2, 1, 2];
+
+    const singleNumber = (nums) => {
+        const uniq = Array.from(new Set(nums));
+        const reduceSum = (s, i) => s + i;
+        const uniqSum = uniq.reduce(reduceSum);
+        const numSum = nums.reduce(reduceSum);
+
+        return uniqSum * 2 - numSum;
+    };
+
+    console.log(singleNumber(input));
+}
