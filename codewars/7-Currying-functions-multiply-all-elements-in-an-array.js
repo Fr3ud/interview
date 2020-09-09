@@ -1,0 +1,1 @@
+const multiplyAll = (arr) => (x) => arr.map((num) => num * x);
