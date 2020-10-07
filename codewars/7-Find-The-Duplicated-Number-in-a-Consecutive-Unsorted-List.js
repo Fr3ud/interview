@@ -1,0 +1,1 @@
+const findDup = (arr) => arr.filter((item, index) => index !== arr.indexOf(item)).pop();
